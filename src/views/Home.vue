@@ -1,18 +1,44 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="container">
+      <AddTodo />
+      <FilterTodos />
+      <Todos />
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import Todos from "@/components/Todos.vue";
+import AddTodo from "@/components/AddTodo.vue";
+import FilterTodos from "@/components/FilterTodos.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld,
+    Todos,
+    AddTodo,
+    FilterTodos,
   },
 };
 </script>
+
+<style lang="scss">
+  body {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  background: white;
+  .home {
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      overflow: auto;
+      padding: 0 2rem;
+    }
+  }
+}
+
+
+
+</style>
